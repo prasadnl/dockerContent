@@ -15,7 +15,7 @@ pipeline {
         }
         stage('push the image to dockerhub') {
             steps {
-                sh 'docker login -u prasadnl -p welcome'
+                sh 'docker login -u admin -p admin'
                 sh 'docker tag myimage03 prasadnl/myimage03'
                 sh 'docker push prasadnl/myimage03'
             }
