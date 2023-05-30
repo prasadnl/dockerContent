@@ -29,6 +29,5 @@ pipeline {
                 sh "docker run -d -P -v myhtml:/usr/local/apache2/htdocs ${params.IMAGE_NAME}"
             }
         }
-
     }
 }
