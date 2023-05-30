@@ -1,5 +1,4 @@
-pipeline {
-    
+pipeline {    
     agent any
     parameters {
         string(name: "IMAGE_NAME", defaultValue: "myimage02", trim: true, description: "Name of the Docker Image to be created")
