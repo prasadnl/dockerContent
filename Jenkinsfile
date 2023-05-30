@@ -20,7 +20,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'DOCKER_HUB_PWD', variable: 'DOCKER_HUB_PWD')]) {
                     sh 'docker login -u prasadnl -p ${DOCKER_HUB_PWD}'
                 }
-                sh "docker tag myimage01 prasadnl/${params.IMAGE_NAME}"
+                sh "docker tag ${params.IMAGE_NAME} prasadnl/${params.IMAGE_NAME}"
                 sh "docker push prasadnl/${params.IMAGE_NAME}"
             }
         }
